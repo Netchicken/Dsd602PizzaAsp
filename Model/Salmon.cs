@@ -4,10 +4,10 @@
     {
         public Salmon()
         {
-            Base = "soft";
+            Base = "Soft but chewy";
             IsGlutenFree = true;
-            //Price = 12;
-            //Size = PizzaSize.Medium;
+            Price = 28;
+            Size = PizzaSize.Large;
             Ingredients.Add("Salmon");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");

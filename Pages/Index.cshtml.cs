@@ -14,6 +14,8 @@ namespace Dsd602PizzaAsp.Pages
         [BindProperty(SupportsGet = true)]
         public Pizza? pizza { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public bool FirstLoad { get; set; } = false;
 
         public List<SelectListItem> PizzaTypesList { get; } = new List<SelectListItem>
         {
@@ -35,6 +37,7 @@ namespace Dsd602PizzaAsp.Pages
         {
             if (ModelState.IsValid)
             {
+                FirstLoad = true;
                 pizza = Factory.GetAPizza(pizza.PizzaType);
 
 

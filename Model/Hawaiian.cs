@@ -5,11 +5,11 @@
 
         public Hawaiian()
         {
-            Base = "soft";
+            Base = "soft with a big edge";
             IsGlutenFree = false;
             IsVegetarian = true;
-            //Price = 12;
-            //Size = PizzaSize.Medium;
+            Price = 25;
+            Size = PizzaSize.Large;
             Ingredients.Add("Pineapple");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");

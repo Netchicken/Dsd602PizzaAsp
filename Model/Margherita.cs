@@ -5,11 +5,11 @@
         public Margherita()
         {
 
-            Base = "soft";
+            Base = "soft and delicate";
             IsGlutenFree = false;
             IsVegetarian = true;
-            //Price = 12;
-            //Size = PizzaSize.Medium;
+            Price = 24;
+            Size = PizzaSize.Medium;
             Ingredients.Add("Basil");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
