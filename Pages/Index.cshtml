@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+
+
+<h1>Choose Your Pizza Calculator</h1>
+<form method="post">
+  <div class="mb-3">
+    
+<div class="row g-3">
+      <div class="col">
+   <label>Enter the Pizza Type</label></br>
+     <select asp-for="@Model.pizza.PizzaType" asp-items="@Model.PizzaTypesList"></select> 
+    </div>
+   
+       
+     @*<div class="col">
+     
+      </div>
+       </div>
+      <div class="form-check">
+    <input class="form-check-input" asp-for="@Model.carpet.HasInstallation">
+    <label class="form-check-label" >Do you want us to install the Carpet?</label>
+    </div>
+
+     <div class="form-check">
+    <input class="form-check-input" asp-for="@Model.carpet.HasUnderlay">
+    <label class="form-check-label" >Do you want Underlay for your Carpet?</label>
+  </div>*@
+  </div>
+   
+  <button type="submit" class="btn btn-primary">Choose Pizza Type</button>
+</form> 
+
+<div class="col">
+     <label>The Pizza base is @Model.pizza.Base</label>
+      <label>Is the Pizza Gluten Free? @Model.pizza.IsGlutenFree</label>
+           <label>Is the Pizza Vegetarian? @Model.pizza.IsVegetarian</label>
+               <label>Is the Pizza Vegetarian? @Model.pizza.IsVegetarian</label>
+               <label>Ingredients</label>
+               <ul>
+       @foreach(string item in Model.pizza.Ingredients){
+       <li>@item</li>
+        }
+  </ul>
+  
+    </div>
+ @*<div style="margin-top: 20px "   class=" border border-success rounded w-75 p-3 bg-success text-white">
+<h2>Results</h2>
+
+<div class="row g-2">
+     <div class="col">
+<label>Room Area @Model.carpet.RoomArea sqm</label>
+    
+    </div>
+     <div class="col">
+
+    <label>Final Cost $@Model.carpet.FinalCost</label>
+    
+    </div>
+    </div>
+   <label>@Model.carpet.Results</label>
+
+<ul>
+       @foreach(string item in Model.carpet.Results){
+       <li>@item</li>
+        }
+  </ul>
+  </div>*@
