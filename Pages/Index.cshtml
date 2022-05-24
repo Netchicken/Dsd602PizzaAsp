@@ -1,33 +1,25 @@
 ﻿@page
 @model IndexModel
 
-
+<div class="card" style=" margin-top: 20px">
+  <div class="card-header">
 <h1>Choose Your Pizza</h1>
 <form method="post">
-  <div class="mb-3">
-    
-<div class="row g-3">
-      <div class="col">
-   <label>Enter the Pizza Type</label></br>
+      
+   <label>Select a Pizza Type</label>
      <select asp-for="@Model.pizza.PizzaType" asp-items="@Model.PizzaTypesList"></select> 
-    </div>
-        
-   
-  </div>
-   
-  <button type="submit" class="btn btn-primary">Choose Pizza Type</button>
-</form> 
+     <button type="submit" class="btn btn-primary">Choose Pizza Type</button>
+  </form> 
+</div>
 
-<div class="card"  style="width:400px">
+@*<div class="card"  style="width: 18rem; margin-top: 20px">*@
 
     @if (Model.FirstLoad)
     {
         <img src ="~/images/@Model.pizza.Image" class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block"/>  
 <div class="card-body"> 
     
-    <p class="card-text">The price is $@Model.pizza.Price</p>
-     <p class="card-text">The size is @Model.pizza.Size</p>
-     <p class="card-text">The Pizza base is @Model.pizza.Base</p>
+    <p class="card-text">The price is $@Model.pizza.Price and the size is @Model.pizza.Size, with a @Model.pizza.Base base</p>
      
      @if (@Model.pizza.IsGlutenFree)
             {
@@ -50,9 +42,9 @@
         
               <div class="card-footer">
               <p class="h4">Ingredients</p>
-               <ul>
+               <ul class="list-group list-group-flush">
        @foreach(string item in Model.pizza.Ingredients){
-       <li>@item</li>
+       <li class="list-group-item">@item</li>
         }
   </ul>
   </div>
