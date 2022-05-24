@@ -13,6 +13,7 @@
             Ingredients.Add("Pineapple");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
+            Image = "hawaiian.jpg";
         }
     }
 }

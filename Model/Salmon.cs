@@ -14,6 +14,7 @@
             Ingredients.Add("Capers");
             Ingredients.Add("Olives");
             Ingredients.Add("Parsley");
+            Image = "salmon.jpg";
         }
     }
 }

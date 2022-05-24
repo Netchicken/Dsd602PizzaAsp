@@ -15,7 +15,7 @@
             Ingredients.Add("Tomatoes");
             Ingredients.Add("Oregano");
             Ingredients.Add("Evoo");
-
+            Image = "margherita.jpg";
 
         }
     }

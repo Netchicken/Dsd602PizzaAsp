@@ -11,7 +11,7 @@
         public List<string> Ingredients { get; set; }
         public List<string> CustomTopping { get; set; }
 
-        public IFormFile Image { get; set; }
+        public string? Image { get; set; }
 
 
 
