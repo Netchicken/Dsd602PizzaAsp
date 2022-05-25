@@ -1,4 +1,7 @@
-﻿namespace Dsd602PizzaAsp.Model
+﻿using Dsd602PizzaAsp.Interfaces;
+using Dsd602PizzaAsp.Operations;
+
+namespace Dsd602PizzaAsp.Model
 {
     public class Pizza : IPizza
     {
@@ -21,11 +24,6 @@
         }
     }
 
-    public enum PizzaSize
-    {
-        Small,
-        Medium,
-        Large
-    }
+
 
 }

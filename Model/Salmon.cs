@@ -1,4 +1,6 @@
-﻿namespace Dsd602PizzaAsp.Model
+﻿using Dsd602PizzaAsp.Operations;
+
+namespace Dsd602PizzaAsp.Model
 {
     public class Salmon : Pizza
     {
