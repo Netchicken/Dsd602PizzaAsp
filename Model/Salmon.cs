@@ -1,15 +1,13 @@
-﻿using Dsd602PizzaAsp.Operations;
-
-namespace Dsd602PizzaAsp.Model
+﻿namespace Dsd602PizzaAsp.Model
 {
     public class Salmon : Pizza
     {
         public Salmon()
         {
-            Base = "Soft but chewy";
+            Name = "Salmon";
+            Base = "Soft base and chewy crust";
             IsGlutenFree = true;
-            Price = 28;
-            Size = PizzaSize.Large;
+
             Ingredients.Add("Salmon");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
@@ -17,6 +15,7 @@ namespace Dsd602PizzaAsp.Model
             Ingredients.Add("Olives");
             Ingredients.Add("Parsley");
             Image = "salmon.jpg";
+            Cost.AddRange(PizzaCost(Ingredients.Count));
         }
     }
 }

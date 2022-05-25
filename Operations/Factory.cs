@@ -5,7 +5,7 @@ namespace Dsd602PizzaAsp.Operations
     public static class Factory
     {
         //factory method that decides which pizza to instantiate
-        public static Pizza GetAPizza(int id)
+        public static Pizza GetAPizza(int? id)
         {
             switch (id)
             {

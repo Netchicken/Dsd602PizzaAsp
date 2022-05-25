@@ -26,28 +26,23 @@ namespace Dsd602PizzaAsp.Pages
 
 
 
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (ModelState.IsValid)
+            {
+                FirstLoad = true;
+                pizza = Factory.GetAPizza(pizza.PizzaTypeSelected);
+            }
+            return Page();
+        }
+
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
 
 
         }
-
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (ModelState.IsValid)
-            {
-                FirstLoad = true;
-                pizza = Factory.GetAPizza(pizza.PizzaType);
-
-
-
-            }
-            return Page();
-        }
-
-
-
 
 
         public void OnGet()

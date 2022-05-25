@@ -1,24 +1,21 @@
-﻿using Dsd602PizzaAsp.Operations;
-
-namespace Dsd602PizzaAsp.Model
+﻿namespace Dsd602PizzaAsp.Model
 {
     public class Margherita : Pizza
     {
         public Margherita()
         {
-
-            Base = "soft and delicate";
+            Name = "Margherita";
+            Base = "soft base and delicate crust";
             IsGlutenFree = false;
             IsVegetarian = true;
-            Price = 24;
-            Size = PizzaSize.Medium;
+
             Ingredients.Add("Basil");
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
             Ingredients.Add("Oregano");
             Ingredients.Add("Evoo");
             Image = "margherita.jpg";
-
+            Cost.AddRange(PizzaCost(Ingredients.Count));
         }
     }
 }
