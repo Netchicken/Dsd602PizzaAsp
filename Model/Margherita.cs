@@ -13,7 +13,7 @@
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
             Ingredients.Add("Oregano");
-            Ingredients.Add("Evoo");
+            Ingredients.Add("Extra Virgin Olive Oil");
             Image = "margherita.jpg";
             Cost.AddRange(PizzaCost(Ingredients.Count));
         }

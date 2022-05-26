@@ -23,25 +23,17 @@ namespace Dsd602PizzaAsp.Model
 
         /// <summary>
         /// The cost of the pizza is the size + the amount of ingredients. A medium pizza is ingredient X2 and large X3
+        /// 
+        /// OK I know counting ingredients is not a good way to work out cost. But its the code thats important, not the reality. One ingredient = $1.
         /// </summary>
         public List<PizzaSizePrice> PizzaCost(int ingredientCount)
         {
             List<PizzaSizePrice> Costing = new List<PizzaSizePrice>();
 
-            PizzaSizePrice pizzaSize1 = new PizzaSizePrice();
-            pizzaSize1.Price = 10 + ingredientCount;
-            pizzaSize1.Size = "Small";
-            Costing.Add(pizzaSize1);
 
-            PizzaSizePrice pizzaSize2 = new PizzaSizePrice();
-            pizzaSize2.Price = 20 + (ingredientCount * 2);
-            pizzaSize2.Size = "Medium";
-            Costing.Add(pizzaSize2);
-
-            PizzaSizePrice pizzaSize3 = new PizzaSizePrice();
-            pizzaSize3.Price = 30 + (ingredientCount * 3);
-            pizzaSize3.Size = "Large";
-            Costing.Add(pizzaSize3);
+            Costing.Add(new PizzaSizePrice("Small", 10 + ingredientCount));
+            Costing.Add(new PizzaSizePrice("Medium", 20 + (ingredientCount * 2)));
+            Costing.Add(new PizzaSizePrice("Large", 30 + (ingredientCount * 3)));
 
             return Costing;
         }

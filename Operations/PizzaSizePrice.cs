@@ -5,6 +5,11 @@
     {
         public String Size { get; set; } = "Small";
         public decimal Price { get; set; }
+
+        public PizzaSizePrice(string Size,decimal Price )
+        {
+
+        }
     }
 
 
