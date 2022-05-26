@@ -22,7 +22,7 @@ namespace Dsd602PizzaAsp.Model
         }
 
         /// <summary>
-        /// The cost of the pizza is the sze + the amount of ingredients. A medium pizza is ingredient X2 and large X3
+        /// The cost of the pizza is the size + the amount of ingredients. A medium pizza is ingredient X2 and large X3
         /// </summary>
         public List<PizzaSizePrice> PizzaCost(int ingredientCount)
         {
