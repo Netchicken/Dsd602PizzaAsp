@@ -1,4 +1,4 @@
-﻿namespace Dsd602PizzaAsp.Model
+﻿namespace Dsd602PizzaAsp.NotUsed
 {
     public class AllIngredients
     {
