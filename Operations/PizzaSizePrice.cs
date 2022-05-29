@@ -6,9 +6,10 @@
         public String Size { get; set; } = "Small";
         public decimal Price { get; set; }
 
-        public PizzaSizePrice(string Size,decimal Price )
+        public PizzaSizePrice(string size, decimal price)
         {
-
+            Size = size;
+            Price = price;
         }
     }
 

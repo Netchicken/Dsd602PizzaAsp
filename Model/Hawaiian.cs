@@ -14,8 +14,12 @@
             Ingredients.Add("Tomatoes");
             Image = "hawaiian.jpg";
             Cost.AddRange(PizzaCost(Ingredients.Count));
+            PizzaChef = PizzaChefName();
         }
 
-
+        public override string PizzaChefName()
+        {
+            return "Ha Why";
+        }
     }
 }

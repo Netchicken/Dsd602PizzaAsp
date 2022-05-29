@@ -16,6 +16,15 @@
             Ingredients.Add("Extra Virgin Olive Oil");
             Image = "margherita.jpg";
             Cost.AddRange(PizzaCost(Ingredients.Count));
+            PizzaChef = PizzaChefName();
+
+        }
+
+
+
+        public override string PizzaChefName()
+        {
+            return "Ma Gar Rita";
         }
     }
 }

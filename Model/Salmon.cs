@@ -16,6 +16,13 @@
             Ingredients.Add("Parsley");
             Image = "salmon.jpg";
             Cost.AddRange(PizzaCost(Ingredients.Count));
+
+            PizzaChef = PizzaChefName();
+        }
+
+        public override string PizzaChefName()
+        {
+            return "Sal Mon";
         }
     }
 }

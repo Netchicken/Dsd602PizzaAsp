@@ -13,11 +13,13 @@ namespace Dsd602PizzaAsp.Model
         public List<string> Ingredients { get; set; }
         public List<PizzaSizePrice> Cost { get; set; }
         public string? Image { get; set; }
+        public string PizzaChef { get; set; }
 
         public Pizza()
         {
             Ingredients = new List<string>();
             Cost = new List<PizzaSizePrice>();
+            PizzaChef = PizzaChefName();
 
         }
 
@@ -38,6 +40,12 @@ namespace Dsd602PizzaAsp.Model
             return Costing;
         }
 
+
+        // Declared virtual so it can be overridden.
+        public virtual string PizzaChefName()
+        {
+            return "Pizza John";
+        }
 
     }
 
