@@ -1,9 +1,9 @@
-﻿namespace Dsd602PizzaAsp.Operations
+﻿namespace Dsd602PizzaAsp.NotUsed
 {
 
     public class PizzaSizePrice
     {
-        public String Size { get; set; } = "Small";
+        public string Size { get; set; } = "Small";
         public decimal Price { get; set; }
 
         public PizzaSizePrice(string size, decimal price)

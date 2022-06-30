@@ -15,7 +15,11 @@
             Ingredients.Add("Oregano");
             Ingredients.Add("Extra Virgin Olive Oil");
             Image = "margherita.jpg";
-            Cost.AddRange(PizzaCost(Ingredients.Count));
+            //   Cost.AddRange(PizzaCost(Ingredients.Count));
+
+            Cost.Add("Small $25");
+            Cost.Add("Medium $35");
+            Cost.Add("Large $37");
             PizzaChef = PizzaChefName();
 
         }

@@ -15,7 +15,10 @@
             Ingredients.Add("Olives");
             Ingredients.Add("Parsley");
             Image = "salmon.jpg";
-            Cost.AddRange(PizzaCost(Ingredients.Count));
+            // Cost.AddRange(PizzaCost(Ingredients.Count));
+            Cost.Add("Small $22");
+            Cost.Add("Medium $32");
+            Cost.Add("Large $37");
 
             PizzaChef = PizzaChefName();
         }

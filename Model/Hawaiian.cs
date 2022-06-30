@@ -13,7 +13,11 @@
             Ingredients.Add("Mozzarella");
             Ingredients.Add("Tomatoes");
             Image = "hawaiian.jpg";
-            Cost.AddRange(PizzaCost(Ingredients.Count));
+            Cost.Add("Small $20");
+            Cost.Add("Medium $32");
+            Cost.Add("Large $37");
+
+
             PizzaChef = PizzaChefName();
         }
 

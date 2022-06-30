@@ -1,6 +1,4 @@
-﻿using Dsd602PizzaAsp.Operations;
-
-namespace Dsd602PizzaAsp.Interfaces
+﻿namespace Dsd602PizzaAsp.Interfaces
 {
     public interface IPizza
     {
@@ -11,6 +9,7 @@ namespace Dsd602PizzaAsp.Interfaces
         bool IsGlutenFree { get; set; }
         bool IsVegetarian { get; set; }
         int? PizzaTypeSelected { get; set; }
-        List<PizzaSizePrice> Cost { get; set; }
+        List<string> Cost { get; set; }
+        string PizzaChef { get; set; }
     }
 }

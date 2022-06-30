@@ -3,80 +3,83 @@
 @model IndexModel
 
 <div class="card" style=" margin-top: 20px">
-  <div class="card-header">
-<h1>Choose Your Pizza</h1>
-<form method="post">
-      
-   <label>Select a Pizza Type</label>
-     <select asp-for="@Model.pizza.PizzaTypeSelected" asp-items="@Model.PizzaTypesList"></select> 
-     <button type="submit" class="btn btn-primary">Choose Pizza Type</button>
-  </form> 
-</div>
+    <div class="card-header">
+        <h1>Choose Your Pizza</h1>
+        <form method="post">
 
-@*<div class="card"  style="width: 18rem; margin-top: 20px">*@
+            <label>Select a Pizza Type</label>
+            <select asp-for="@Model.pizza.PizzaTypeSelected" asp-items="Html.GetEnumSelectList<PizzaTypesEnum>()">
+                <option selected="selected" value="">Select a Pizza</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Choose Pizza Type</button>
+        </form>
+    </div>
+
+    @*<div class="card"  style="width: 18rem; margin-top: 20px">*@
 
     @if (Model.FirstLoad)
     {
-        <img src ="~/images/@Model.pizza.Image" class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block"/>  
-<div class="card-body"> 
-    
-   <p class="card-text"> The  @Model.pizza.Name Pizza has a @Model.pizza.Base</p>
-     
-     @if (@Model.pizza.IsGlutenFree)
+        <img src="~/images/@Model.pizza.Image" class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block" />
+        <div class="card-body">
+
+            <p class="card-text"> The  @Model.pizza.Name Pizza has a @Model.pizza.Base</p>
+
+            @if (@Model.pizza.IsGlutenFree)
             {
                 <p class="card-text">The Pizza is Gluten Free</p>
             }
             else
             {
-                 <p class="card-text">The Pizza contains Gluten</p>
+                <p class="card-text">The Pizza contains Gluten</p>
             }
 
-             @if (@Model.pizza.IsVegetarian)
+            @if (@Model.pizza.IsVegetarian)
             {
                 <p class="card-text">The Pizza is Vegetarian</p>
             }
             else
             {
-                 <p class="card-text">The Pizza not Vegetarian</p>
+                <p class="card-text">The Pizza not Vegetarian</p>
             }
 
-        
-              <div class="card-footer">
-                  <div class="row">
-                      <div class="col">
 
-              <p class="h4">Ingredients</p>
-               <ul class="list-group list-group-flush">
-       @foreach(string item in Model.pizza.Ingredients){
-       <li class="list-group-item">@item</li>
-        }
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col">
 
-        </ul>
+                        <p class="h4">Ingredients</p>
+                        <ul class="list-group list-group-flush">
+                            @foreach (string item in Model.pizza.Ingredients)
+                            {
+                                <li class="list-group-item">@item</li>
+                            }
+
+                        </ul>
+                    </div>
+                    <div class="col">
+
+                        <p class="h4">Cost</p>
+                        <ul class="list-group list-group-flush">
+                            @foreach (string item in Model.pizza.Cost)
+                            {
+                                <li class="list-group-item">@item</li>
+                            }
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
         </div>
-         <div class="col">
-        
-        <p class="h4">Cost</p>
-               <ul class="list-group list-group-flush">
-       @foreach(PizzaSizePrice item in Model.pizza.Cost){
-       <li class="list-group-item">@item.Size  - $@item.Price</li>
-        }
-  </ul>
+        <div class="card-footer">
+            <p class="card-text">This @Model.pizza.Name pizza is created by @Model.pizza.PizzaChef </p>
+
+        </div>
 
 
-   </div>
-
-  
-  </div>
-  </div>
-   
-  
-  </div>
- <div class="card-footer">
-     <p class="card-text">This @Model.pizza.Name pizza is created by @Model.pizza.PizzaChef </p>
-
-       </div>
-
-
-   }
-    </div>
- 
+    }
+</div>
